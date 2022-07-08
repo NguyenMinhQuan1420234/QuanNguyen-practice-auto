@@ -20,14 +20,14 @@ public class BasePage {
     }
 
     public void navigate(String url) {
-        try {
-            Thread.sleep(5000);
-            driver.get(ConfigConstants.BASE_URL + url);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        // driver.get(ConfigConstants.BASE_URL + url);
+        // try {
+        //     Thread.sleep(5000);
+        //     driver.get(ConfigConstants.BASE_URL + url);
+        // } catch (InterruptedException e) {
+        //     // TODO Auto-generated catch block
+        //     e.printStackTrace();
+        // }
+        driver.get(ConfigConstants.BASE_URL + url);
 
     }
 
