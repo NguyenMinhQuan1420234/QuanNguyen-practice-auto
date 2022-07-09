@@ -26,7 +26,7 @@ public class BaseTest {
     }
 
     @BeforeClass
-    public void BeforeMethod() {
+    public void BeforeMethod() throws InterruptedException {
         Log.info("Tests is starting!");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();

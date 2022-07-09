@@ -28,31 +28,49 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static com.quannguyen.utils.extentreports.ExtentTestManager.startTest;
 
-@Listeners(ExtentIReporterSuiteListenerAdapter.class)
+
+
+@Listeners({ ExtentIReporterSuiteListenerAdapter.class })
 public class LoginTest extends BaseTest {
 
     public WebDriver driver;
     LoginPage loginPage;
     NavigationPage navigatePage;
-    
+    private By BASEPAGE_APPEAR = By.xpath("//div[@id='app']");
 
     @BeforeMethod
     public void BeforeMethod() {
+ 
+        // System.setProperty("webdriver.chrome.driver", "C:/Users/banch/TestNG/demo/chromedriver.exe");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(ConfigConstants.BASE_URL);
+
+    }
+
+    @Test(priority = 0, description = "Login successfully.")
+    public void openBrowser(Method method) {
+        System.out.println("Checking if browser working right.");
     }
 
     @Test(priority = 1, description = "Login successfully.")
-    public void LoginSuccessfulCase(Method method) {
+    public void LoginSuccessfulCase(Method method) throws InterruptedException {
 
         startTest(method.getName(), "Login with valid username and password.");
 
         loginPage = new LoginPage(driver);
         navigatePage = new NavigationPage(driver);
+        
+        navigatePage.waitForElmentToBeVisibile(BASEPAGE_APPEAR);
 
-        loginPage.navigate(UrlConstants.LOGIN_URL);
+        try {
+            loginPage.navigate(UrlConstants.LOGIN_URL);
+
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+
         loginPage.inputUsername(ConfigConstants.USERNAME);
         loginPage.inputPassword(ConfigConstants.PASSWORD);
         loginPage.ClickLoginBtn();
@@ -72,9 +90,8 @@ public class LoginTest extends BaseTest {
         loginPage.inputUsername("");
         loginPage.inputPassword("");
         loginPage.ClickLoginBtn();
-        String name = navigatePage.getClassAttribute();
-        System.out.println("name");
-        // assertThat("verify message", navigatePage., equalTo(ConfigConstants.INVALID_CLASS_VALUE));
+
+        assertThat("verify message",  navigatePage.getClassAttribute(), equalTo(ConfigConstants.USERNAME_CLASS_INVALID));
     }
 
     @AfterMethod

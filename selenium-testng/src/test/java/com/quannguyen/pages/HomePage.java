@@ -26,16 +26,16 @@ public class HomePage extends BasePage {
      * Page Methods
      */
     //Go to Homepage
-    public HomePage goToN11() {
-        Log.info("Opening N11 Website.");
-        driver.get(baseURL);
-        return this;
-    }
+    // public HomePage goToN11() {
+    //     Log.info("Opening N11 Website.");
+    //     driver.get(baseURL);
+    //     return this;
+    // }
 
     //Go to LoginPage
-    public LoginPage goToLoginPage() {
-        Log.info("Going to Login Page..");
-        clickElement(signInButtonClass);
-        return new LoginPage(driver);
-    }
+    // public LoginPage goToLoginPage() {
+    //     Log.info("Going to Login Page..");
+    //     clickElement(signInButtonClass);
+    //     return new LoginPage(driver);
+    // }
 }

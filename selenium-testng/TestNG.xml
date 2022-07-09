@@ -4,6 +4,7 @@
     <listeners>
         <listener class-name="utils.listeners.TestListener"/>
         <listener class-name="utils.listeners.AnnotationTransformer"/>
+        <listener class-name="com.aventstack.extentreports.adapter.listener.ExtentITestListenerClassAdapter"></listener>
     </listeners>
     <test name="LoginTest">
         <classes>
