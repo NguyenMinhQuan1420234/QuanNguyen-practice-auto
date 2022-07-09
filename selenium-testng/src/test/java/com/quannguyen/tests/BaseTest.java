@@ -16,7 +16,6 @@ import com.quannguyen.utils.logs.Log;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-@Listeners(ExtentIReporterSuiteListenerAdapter.class)
 public class BaseTest {
     public WebDriver driver;
     public HomePage  homePage;
