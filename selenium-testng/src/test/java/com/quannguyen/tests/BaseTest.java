@@ -6,9 +6,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.testng.listener.ExtentIReporterSuiteListenerAdapter;
+import com.quannguyen.contents.ConfigConstants;
 import com.quannguyen.pages.HomePage;
 import com.quannguyen.utils.logs.Log;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+@Listeners(ExtentIReporterSuiteListenerAdapter.class)
 public class BaseTest {
     public WebDriver driver;
     public HomePage  homePage;
@@ -18,18 +26,16 @@ public class BaseTest {
     }
 
     @BeforeClass
-    public void classLevelSetup() {
+    public void BeforeMethod() {
         Log.info("Tests is starting!");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-    }
-
-    @BeforeMethod
-    public void methodLevelSetup() {
-        homePage = new HomePage(driver);
+        driver.manage().window().maximize();
+        driver.get(ConfigConstants.BASE_URL);
     }
 
     @AfterClass
-    public void teardown() {
+    public void AfterMethod() {
         Log.info("Tests are ending!");
         driver.quit();
     }

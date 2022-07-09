@@ -35,7 +35,7 @@ public class HomePage extends BasePage {
     //Go to LoginPage
     public LoginPage goToLoginPage() {
         Log.info("Going to Login Page..");
-        click(signInButtonClass);
+        clickElement(signInButtonClass);
         return new LoginPage(driver);
     }
 }

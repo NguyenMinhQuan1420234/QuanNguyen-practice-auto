@@ -9,10 +9,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.testng.listener.ExtentIReporterSuiteListenerAdapter;
 import com.quannguyen.contents.ConfigConstants;
 import com.quannguyen.contents.UrlConstants;
+import com.quannguyen.pages.BasePage;
+import com.quannguyen.pages.HomePage;
 import com.quannguyen.pages.LoginPage;
 import com.quannguyen.pages.NavigationPage;
 
@@ -24,7 +28,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static com.quannguyen.utils.extentreports.ExtentTestManager.startTest;
 
-public class LoginTest {
+@Listeners(ExtentIReporterSuiteListenerAdapter.class)
+public class LoginTest extends BaseTest {
+
     public WebDriver driver;
     LoginPage loginPage;
     NavigationPage navigatePage;
@@ -50,6 +56,7 @@ public class LoginTest {
         loginPage.inputUsername(ConfigConstants.USERNAME);
         loginPage.inputPassword(ConfigConstants.PASSWORD);
         loginPage.ClickLoginBtn();
+
         assertThat("verify message", navigatePage.getUsername(), equalTo(ConfigConstants.USERNAME));
     }
 
@@ -65,7 +72,9 @@ public class LoginTest {
         loginPage.inputUsername("");
         loginPage.inputPassword("");
         loginPage.ClickLoginBtn();
-        assertThat("verify message", navigatePage.getUsername(), equalTo(ConfigConstants.USERNAME));
+        String name = navigatePage.getClassAttribute();
+        System.out.println("name");
+        // assertThat("verify message", navigatePage., equalTo(ConfigConstants.INVALID_CLASS_VALUE));
     }
 
     @AfterMethod

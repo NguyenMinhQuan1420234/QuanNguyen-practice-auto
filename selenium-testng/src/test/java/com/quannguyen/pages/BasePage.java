@@ -31,17 +31,9 @@ public class BasePage {
 
     }
 
-    public void click(By by) {
-        waitVisibility(by).click();
-    }
-
-    public WebElement waitForElmentToBeClickable(By locator) {
-        return wait.until(ExpectedConditions.elementToBeClickable(locator));
-    }
-
-    public WebElement waitForElmentToBeVisibile(By locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
+    // public void click(By by) {
+    //     waitVisibility(by).click();
+    // }
 
     public void inputText(By locator, String text) {
         WebElement element = waitForElmentToBeClickable(locator);
@@ -58,8 +50,21 @@ public class BasePage {
         return element.getText();
     }
 
-    public WebElement waitVisibility(By by) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    public String getAttribute(By locator, String attribute) {
+        WebElement element = waitForElmentToBeVisibile(locator);
+        return element.getAttribute(attribute);
     }
+
+    public WebElement waitForElmentToBeClickable(By locator) {
+        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public WebElement waitForElmentToBeVisibile(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    // public WebElement waitVisibility(By by) {
+    //     return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    // }
  
 }
