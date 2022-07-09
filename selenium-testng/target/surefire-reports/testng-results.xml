@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-10T02:58:01 ICT" name="Command line suite" finished-at="2022-07-10T02:58:26 ICT" duration-ms="25652">
+    <groups>
+    </groups>
+    <test started-at="2022-07-10T02:58:01 ICT" name="Command line test" finished-at="2022-07-10T02:58:26 ICT" duration-ms="25652">
+      <class name="com.quannguyen.tests.LoginTest">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:com.quannguyen.tests.LoginTest@14fc1f0]" started-at="2022-07-10T02:58:01 ICT" name="BeforeMethod" finished-at="2022-07-10T02:58:08 ICT" duration-ms="7350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="openBrowser(java.lang.reflect.Method)[pri:0, instance:com.quannguyen.tests.LoginTest@14fc1f0]" started-at="2022-07-10T02:58:08 ICT" name="openBrowser" description="Login successfully." finished-at="2022-07-10T02:58:08 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.quannguyen.tests.LoginTest.openBrowser(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:com.quannguyen.tests.LoginTest@14fc1f0]" started-at="2022-07-10T02:58:08 ICT" name="AfterMethod" finished-at="2022-07-10T02:58:08 ICT" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:com.quannguyen.tests.LoginTest@14fc1f0]" started-at="2022-07-10T02:58:08 ICT" name="BeforeMethod" finished-at="2022-07-10T02:58:14 ICT" duration-ms="5903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="LoginSuccessfulCase(java.lang.reflect.Method)[pri:1, instance:com.quannguyen.tests.LoginTest@14fc1f0]" started-at="2022-07-10T02:58:14 ICT" name="LoginSuccessfulCase" description="Login successfully." finished-at="2022-07-10T02:58:18 ICT" duration-ms="3548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.quannguyen.tests.LoginTest.LoginSuccessfulCase(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginSuccessfulCase -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:com.quannguyen.tests.LoginTest@14fc1f0]" started-at="2022-07-10T02:58:18 ICT" name="AfterMethod" finished-at="2022-07-10T02:58:18 ICT" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:com.quannguyen.tests.LoginTest@14fc1f0]" started-at="2022-07-10T02:58:18 ICT" name="BeforeMethod" finished-at="2022-07-10T02:58:24 ICT" duration-ms="5577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="LoginUnsuccessfully(java.lang.reflect.Method)[pri:1, instance:com.quannguyen.tests.LoginTest@14fc1f0]" started-at="2022-07-10T02:58:24 ICT" name="LoginUnsuccessfully" description="Login Unsuccessfully with empty username and password." finished-at="2022-07-10T02:58:26 ICT" duration-ms="2584" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.quannguyen.tests.LoginTest.LoginUnsuccessfully(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginUnsuccessfully -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:com.quannguyen.tests.LoginTest@14fc1f0]" started-at="2022-07-10T02:58:26 ICT" name="AfterMethod" finished-at="2022-07-10T02:58:26 ICT" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+      </class> <!-- com.quannguyen.tests.LoginTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
