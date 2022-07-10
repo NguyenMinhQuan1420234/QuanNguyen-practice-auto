@@ -2,13 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test Suite" >
     <listeners>
-        <listener class-name="utils.listeners.TestListener"/>
-        <listener class-name="utils.listeners.AnnotationTransformer"/>
-        <listener class-name="com.aventstack.extentreports.adapter.listener.ExtentITestListenerClassAdapter"></listener>
+        <listener class-name="com.quannguyen.utils.listeners.TestListeners"/>
+        <listener class-name="com.quannguyen.utils.listeners.AnnotationTransformer"/>
     </listeners>
     <test name="LoginTest">
         <classes>
-            <class name="tests.LoginTests"/>
+            <class name="com.quannguyen.tests.LoginTest"/>
         </classes>
     </test>
 </suite>

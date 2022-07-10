@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="6.136" tests="3" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="6.449" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="18.0.1.1+2-6"/>
@@ -60,7 +60,7 @@
     <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="openBrowser" classname="com.quannguyen.tests.LoginTest" time="0.003"/>
-  <testcase name="LoginSuccessfulCase" classname="com.quannguyen.tests.LoginTest" time="3.549"/>
-  <testcase name="LoginUnsuccessfully" classname="com.quannguyen.tests.LoginTest" time="2.584"/>
+  <testcase name="openBrowser" classname="com.quannguyen.tests.LoginTest" time="0.007"/>
+  <testcase name="LoginSuccessfulCase" classname="com.quannguyen.tests.LoginTest" time="3.525"/>
+  <testcase name="LoginUnsuccessfully" classname="com.quannguyen.tests.LoginTest" time="2.917"/>
 </testsuite>
